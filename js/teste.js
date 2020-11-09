@@ -368,14 +368,29 @@ const cidadesTeste = [
 mostrarChanceDeChuvaHora = () => {
   var hora = document.getElementById('rateRainHour');
   var color;
+  var faixaHora;
 
   for(var i = 0; i < 6; i++) {
+    if (i == 0) {
+      faixaHora = '08AM';
+    } else if(i == 1) {
+      faixaHora = '12PM';
+    } else if (i == 2) {
+      faixaHora = '16PM';
+    } else if (i == 3) {
+      faixaHora = '20PM';
+    } else if (i == 4) {
+      faixaHora = '00AM'; 
+    } else if (i ==5) {
+      faixaHora = '04AM';
+    }
+
     if (cidadesTeste[1].data['domingo'].chanceDeChuva[i] <= 70) {
       var color = 'yellow';
     } else {
       var color = 'purple';
     }
-    
+
     hora.innerHTML+= `
 
     <div class="graphic-area">
@@ -385,7 +400,7 @@ mostrarChanceDeChuvaHora = () => {
       </div>
 
       <div class="x-Area">
-        <p>08AM</p>
+        <p>`+faixaHora+`</p>
       </div>
     </div>
     
