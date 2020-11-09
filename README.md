@@ -43,7 +43,7 @@ Abaixo o resultado do desenvolvimento do projeto.
 
 Main page
 
-<img src="https://github.com/juliocamposmota/PrevisaoDoTempo/blob/main/github/layout1.PNG" width=650 heigth=550>
+<img src="https://github.com/juliocamposmota/PrevisaoDoTempo/blob/main/github/layout.PNG" width=650 heigth=550>
 
 ## Como rodar a aplicação :arrow_forward:
 
