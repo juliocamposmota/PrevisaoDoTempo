@@ -1,0 +1,511 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.center {
+  padding: 22px 4%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+}
+
+/* ----------------- LEFT CONTAINER INIT ----------------- */
+
+.left-container {
+  background-color: #F3FBFF;
+  height: auto;
+}
+
+.left-container > .center {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-rows: auto auto auto;
+}
+
+/* ----------------- PESQUISAR CONTAINER INIT ----------------- */
+
+.pesquisar-container {
+  width: auto;
+  margin-top: 15px;
+}
+
+.pesquisar-container .input-container {
+  width: 350px;
+  height: 50px;
+
+  background-color: white;
+  border-radius:10px;
+
+  display: block;
+}
+
+input { color: black; }
+input:focus { outline: 0; }
+::-webkit-input-placeholder { color: #ccc; }
+:-moz-placeholder { color: #ccc; } /* Firefox 18- */
+::-moz-placeholder { color: #ccc; } /* Firefox 19+ */
+:-ms-input-placeholder { color: #ccc; }
+
+.pesquisar-container .input-container #pesquisar-text{
+  width: 300px;
+  height:32px;
+
+  float: left;
+  padding-left:15px;
+  font-size:14px;
+  border:none;
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pesquisar-container .input-container #pesquisar-icon {
+  width: 20px;
+  float: left;
+  margin-left: 15px;
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pesquisar-container h1 {
+  font-weight: 400;
+  font-size: 35px;
+
+  margin-top: 20px;
+
+  color: #110E3C;
+}
+
+.pesquisar-container h1 > span {
+  font-weight: 700;
+}
+
+/* ----------------- PESQUISAR CONTAINER END ----------------- */
+
+/* ----------------- ULTIMAS CONTAINER INIT ----------------- */
+
+.ultimas-container h3 {
+  margin-bottom: 15px;
+  font-weight: 400;
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 16px;
+}
+
+.img-container .img-single img {
+  width: 160px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.img-container .img-single:nth-of-type(1) img {
+  height: 230px;
+}
+
+.img-container .img-single:nth-of-type(2) img,
+.img-container .img-single:nth-of-type(3) img {
+  height: 190px;
+  margin-top: 40px;
+}
+
+.img-container .img-single:nth-of-type(4) img {
+  height: 190px;
+  margin-top: 40px;
+
+  border: 1px solid gray;
+  background-image: none;
+}
+
+.img-container .img-single p {
+  width: 160px;
+  text-align: center;
+  font-weight: 400;
+}
+
+/* ----------------- ULTIMAS CONTAINER END ----------------- */
+
+/* ----------------- SEMANA CONTAINER INIT ----------------- */
+
+.forecast-container h3 {
+  margin-bottom: 15px;
+}
+
+/* .forecasts {
+  max-height: 300px;
+
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-rows: repeat(7, 1fr);
+} */
+
+.forecasts .forecast {
+  width: 100%;
+  height: 30px;
+
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-columns: 1fr 1fr 5fr;
+}
+
+.forecast .humidity {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.forecast .humidity img {
+  padding-left: 25px;
+}
+
+.forecast .humidity p {
+  color: #777777;
+}
+
+.forecast .weather {
+  display: grid;
+  grid-gap: 0.5rem 0.5rem 0 0.5rem ;
+  grid-template-columns: 0.5fr 0.5fr 1fr 1fr 0.5fr;
+}
+
+.forecast img,
+.forecast .min-value,
+.forecast .max-value {
+  margin: 0 auto;
+}
+
+.humidity-icon {
+  width: 45px;
+}
+
+.weather-icon {
+  width: 30px;
+}
+
+ .weather .min-value {
+  color: #777777;
+}
+
+.min-graphic {
+  border-right: 2px dashed #777777;
+  z-index: 2;
+}
+
+ .min-graphic .max-dotbar {
+  margin-top: 14px;
+  border-top: 2px dashed #777777;
+}
+
+ .min-graphic .min-value-dotbar {
+  width: 61px;
+  float: right;
+  margin-top: -5px;
+  border-top: 7px solid #777777;
+  border-radius: 20px 0 0 20px;
+  z-index: 0;
+}
+
+ul li:nth-of-type(1) .min-value-dotbar,
+ul li:nth-of-type(6) .min-value-dotbar,
+ul li:nth-of-type(7) .min-value-dotbar { width: 61px; }
+ul li:nth-of-type(2) .min-value-dotbar { width: 21px; }
+ul li:nth-of-type(3) .min-value-dotbar { width: 91px; }
+ul li:nth-of-type(4) .min-value-dotbar { width: 41px; }
+
+.max-graphic .max-dotbar {
+  margin-top: 14px;
+  border-top: 3px dashed #979797;
+}
+
+.max-graphic .max-value-dotbar {
+  width: 61px;
+  float: left;
+  margin-top: -5px;
+  border-top: 7px solid #F03D24;
+  border-radius: 0 20px 20px 0;
+  z-index:1;
+}
+
+ul li:nth-of-type(2) .max-value-dotbar { width: 41px; }
+ul li:nth-of-type(1) .max-value-dotbar,
+ul li:nth-of-type(3) .max-value-dotbar,
+ul li:nth-of-type(4) .max-value-dotbar,
+ul li:nth-of-type(7) .max-value-dotbar { width: 91px; }
+ul li:nth-of-type(5) .max-value-dotbar { width: 21px; }
+ul li:nth-of-type(6) .max-value-dotbar { width: 61px; }
+
+.forecasts ul {
+  list-style: none;
+}
+
+/* ----------------- SEMANA CONTAINER END ----------------- */
+
+/* ----------------- LEFT CONTAINER END ----------------- */
+
+/* ----------------- RIGHT CONTAINER INIT ----------------- */
+
+.right-container {
+  background-color: #110E3C;
+  background-image: url(../images/banner.png);
+  background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: center;
+  height: auto;
+}
+
+.right-container > .center {
+  display: grid;
+  grid-gap: 0.5rem;
+  grid-template-rows: auto auto auto auto;
+}
+
+/* ----------------- HEADER CONTAINER INIT ----------------- */
+
+.header-container {
+  margin-top: 15px;
+
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  color: white;
+}
+
+.header-container a {
+  font-size: 14px;
+  font-weight: 200;
+  margin-top: 10px;
+}
+
+.notificacoes a {
+  float: left;
+}
+
+.flag a {
+  font-size: 8px;
+  text-align: center;
+  padding-top: 2px;
+}
+
+.flag-notificacoes {
+  width: 15px;
+  height: 15px;
+  margin: 3px 5px;
+  background-color: #c21313;
+  border-radius: 3px;
+}
+
+#img-user {
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 10px;
+
+  float: left;
+}
+
+.reddot {
+  width: 10px;
+  height: 10px;
+  background-color: #c21313;
+  border-radius: 5px;
+
+  margin-left: -7px;
+  margin-top: -4px;
+
+  float: left;
+}
+
+/* ----------------- HEADER CONTAINER END ----------------- */
+
+/* ----------------- TODAY CONTAINER INIT ----------------- */
+
+.today-container {
+  margin: 40px 0 20px 0;
+  color: white;
+}
+
+.date-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.icon-weather img {
+  width: 45px;
+  position: relative;
+  top: 50%;
+  left: calc(100% - 45px);
+  transform: translateY(-50%);
+}
+
+.today-weather h1 {
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.today-weather p {
+  font-size: 12px;
+  font-weight: 200;
+  color: #979797;
+}
+
+/* ----------------- TODAY CONTAINER END ----------------- */
+
+/* ----------------- VALUE TODAY CONTAINER INIT ----------------- */
+
+.value-today-container {
+  color: #979797;
+  text-align: center;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.value-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.value-container h1 {
+  color: white;
+  font-size: 88px;
+  font-weight: 500;
+  text-align: right;
+}
+
+.value-container span {
+  color: white;
+  font-size: 26px;
+  font-weight: 200;
+  text-align: left;
+  margin-top: 15px;
+}
+
+.sensacao-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1.5fr 0.1fr 1.5fr;
+}
+
+.sensacao-container p:nth-of-type(1) {
+  text-align: right;
+  margin-right: 15px;
+}
+
+.sensacao-container p:nth-of-type(2) {
+  text-align: left;
+  margin-left: 15px;
+}
+
+.sensacao-container .dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 5px;
+  background-color: #979797;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%);
+  transform: translateX(-50%);
+}
+
+/* ----------------- VALUE TODAY CONTAINER END ----------------- */
+
+/* ----------------- HOUR CONTAINER INIT ----------------- */
+
+.hour-container {
+  color: white;
+  margin-top: 40px;
+  font-weight: 200;
+  font-size: 14px;
+}
+
+.hour-container .grid-container {
+  margin-top: 30px;
+
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: 1fr 6fr;
+}
+
+.hour-container .grid-container .left-grid {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-rows: auto auto auto auto;
+}
+
+.hour-container .grid-container .right-grid {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+
+.hour-container .grid-container .right-grid .graphic-area {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-rows: 7fr 1fr;
+}
+
+.hour-container .grid-container .right-grid .graphic-area .graphic-bar {
+  position: relative;
+} 
+
+.hour-container .grid-container .right-grid .graphic-area .max-dotbar {
+  height: 100%;
+
+  float:left;
+  border-left: 2px dashed #302E63;
+  position: relative;
+  left: 50%;
+}
+
+.hour-container .grid-container .right-grid .graphic-area .value-dotbar {
+  width: 10px;
+  border-radius: 10px;
+  position: absolute;
+  left: calc(50% - 4px);
+  bottom: 0;
+}
+
+.h135 { height: 135px; }
+.h120 { height: 120px; }
+.h100 { height: 100px; }
+.h80 { height: 80px; }
+.h60 { height: 60px; }
+.purple { background-color: #302E63; }
+.yellow { background-color: #FFEB3B; }
+
+.hour-container .grid-container .right-grid .graphic-area p {
+  text-align: center;
+}
+
+/* ----------------- HOUR CONTAINER END ----------------- */
+
+/* ----------------- RIGHT CONTAINER END ----------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
