@@ -59,7 +59,7 @@ Main page
 
 Próximos passos:
 
-:memo: Aplicar responsividade.
+:memo: Melhorar detalhes de responsividade.
 
 :memo: Configurar o sistema de clicks do site com JS.
 
