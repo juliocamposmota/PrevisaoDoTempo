@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Esig - Desafio Estágio Front End</title>
+      <meta charset="utf-8"/>
+      <link href="styles/global.css" rel="stylesheet" />
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  </head>
+
+  <body>
+    <section class="container">
+      <section class="left-container">
+        <div class="center">
+          <div class="pesquisar-container">
+            <div class="input-container">
+              <img src="images/icon-search.svg" id="pesquisar-icon" alt="pesquisar"/>
+              <input type="text" id="pesquisar-text" placeholder="Pesquisar lugar" />
+      
+              <div class="clear"></div><!--clear-->
+            </div><!--input-container-->
+    
+            <h1>Previsão do <span>Tempo</span></h1>
+          </div><!--pesquisar-container-->
+  
+          <div class="ultimas-container">
+            <h3>Última visualizada</h3>
+
+            <div class="img-container" id="cities"></div><!--img-container-->
+          </div><!--ultimas-container-->
+
+          <div class="forecast-container">
+            <h3>Semana</h3>
+    
+            <div class="forecasts">
+              <ul id="forecasts"></ul>
+            </div><!--forecasts-->
+          </div><!--forecast-container-->
+        </div><!--center-->
+      </section><!--left-container-->
+
+      <section class="right-container">
+        <div class="center">
+          <div class="header-container">
+            <div class="notificacoes">
+              <a>Notificações</a>
+              <div class="clear"></div><!--clear-->
+
+              <div class="flag">
+                <a class="flag-notificacoes">4</a><!--flag-notificacoes-->
+              </div><!--flag-->
+            </div><!--notificacoes-->
+
+            <a>Lugares</a>
+
+            <div class="img-user-container">
+              <img src="images/img-user.jpg" id="img-user" alt="user"/>
+
+              <div class="reddot"></div><!--reddot-->
+              <div class="clear"></div><!--clear-->
+            </div><!--img-user-container-->
+          </div><!--header-container-->
+
+          <div class="today-container" id="dateToday">
+
+          </div><!--today-container-->
+
+          <div class="value-today-container" id="weatherToday">
+
+          </div><!--value-container-->
+
+          <div class="hour-container">
+            <p>Chance de chuva</p>
+
+            <div class="grid-container">
+              <div class="left-grid">
+                <p>Sol</p>
+                <p>Chuva</p>
+                <p>Tempestade</p>
+              </div><!--left-grid-->
+
+              <div class="right-grid" id="rateRainHour">
+
+              </div><!--right-grid-->
+            </div><!--grid-container-->
+          </div><!--hour-container-->
+        </div><!--center-->
+      </section><!--right-container-->
+    </section><!--container-->
+
+    <script src="js/inicializar.js"></script>
+    <script src="js/teste.js"></script>
+  </body>
+</html>
